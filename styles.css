@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(90, 138, 189);
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px auto;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 4px rgba(3, 6, 9, 0.2);
+  border-radius: 6px;
+  font-size: 18px;
+  color: #333;
+  outline: none;
+}
+
+.search-button {
+  background-color: blue;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  box-shadow: 2px 2px 6px rgb(9, 6, 19);
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: rgb(2, 3, 88);
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.search-result {
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 6px;
+  width: 30%;
+  position: relative;
+}
+
+.search-result:hover img {
+  transform: scale(1.05);
+}
+
+.search-result img {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.4s ease-in-out;
+}
+.search-result:hover img {
+  opacity: 0.7;
+}
+
+.search-result .image-name {
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 6px;
+  width: 30%;
+}
+
+.search-result .image-name {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity o.3s ease;
+}
+.search-result:hover .image-name {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+
+a:hover {
+  background-color: rgb(58, 35, 58);
+  text-decoration: underline;
+}
+
+.show-more-button {
+  background-color: #008cba;
+  border: none;
+  display: block;
+  align-items: center;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto;
+  font-size: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(10, 16, 22, 0.918);
+  transition: background-color 0.4s ease-in-out;
+  display: none;
+}
+
+.show-more-button:hover {
+  background-color: #055d7a;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-input {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .search-result {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-result {
+    width: 100%;
+  }
+}
